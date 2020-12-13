@@ -19,6 +19,10 @@
 		29A470D325865702009B5095 /* EndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470D025865702009B5095 /* EndpointProvider.swift */; };
 		29A470D425865702009B5095 /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470D125865702009B5095 /* NetworkRequestError.swift */; };
 		29A470D525865702009B5095 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470D225865702009B5095 /* NetworkManager.swift */; };
+		29A470DD25865A21009B5095 /* BirthdayList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A470DC25865A21009B5095 /* BirthdayList.storyboard */; };
+		29A470E225865A52009B5095 /* BirthdayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470E125865A52009B5095 /* BirthdayListViewController.swift */; };
+		29A470E725865AA4009B5095 /* BirthdayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470E625865AA4009B5095 /* BirthdayListViewModel.swift */; };
+		29A470EC25865B0F009B5095 /* BirthdayListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470EB25865B0F009B5095 /* BirthdayListViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		29A470D025865702009B5095 /* EndpointProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProvider.swift; sourceTree = "<group>"; };
 		29A470D125865702009B5095 /* NetworkRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
 		29A470D225865702009B5095 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		29A470DC25865A21009B5095 /* BirthdayList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BirthdayList.storyboard; sourceTree = "<group>"; };
+		29A470E125865A52009B5095 /* BirthdayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewController.swift; sourceTree = "<group>"; };
+		29A470E625865AA4009B5095 /* BirthdayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewModel.swift; sourceTree = "<group>"; };
+		29A470EB25865B0F009B5095 /* BirthdayListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +206,10 @@
 		29A470CA25865420009B5095 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				29A470DC25865A21009B5095 /* BirthdayList.storyboard */,
+				29A470E125865A52009B5095 /* BirthdayListViewController.swift */,
+				29A470E625865AA4009B5095 /* BirthdayListViewModel.swift */,
+				29A470EB25865B0F009B5095 /* BirthdayListViewBuilder.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -324,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A4708E25865141009B5095 /* LaunchScreen.storyboard in Resources */,
+				29A470DD25865A21009B5095 /* BirthdayList.storyboard in Resources */,
 				29A4708B25865141009B5095 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,9 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A470BA25865227009B5095 /* AppCoordinator.swift in Sources */,
+				29A470E725865AA4009B5095 /* BirthdayListViewModel.swift in Sources */,
 				29A470D325865702009B5095 /* EndpointProvider.swift in Sources */,
+				29A470E225865A52009B5095 /* BirthdayListViewController.swift in Sources */,
 				29A470822586513F009B5095 /* AppDelegate.swift in Sources */,
 				29A470B925865227009B5095 /* Coordinator.swift in Sources */,
+				29A470EC25865B0F009B5095 /* BirthdayListViewBuilder.swift in Sources */,
 				29A470D525865702009B5095 /* NetworkManager.swift in Sources */,
 				29A470D425865702009B5095 /* NetworkRequestError.swift in Sources */,
 				29A470842586513F009B5095 /* SceneDelegate.swift in Sources */,
