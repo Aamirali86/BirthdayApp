@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293C81D9258669BC00D43E4E /* PeopleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C81D8258669BC00D43E4E /* PeopleProvider.swift */; };
 		29A470822586513F009B5095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470812586513F009B5095 /* AppDelegate.swift */; };
 		29A470842586513F009B5095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470832586513F009B5095 /* SceneDelegate.swift */; };
 		29A4708B25865141009B5095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A4708A25865141009B5095 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		29A4710A25865EFE009B5095 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710525865EFD009B5095 /* UIViewController+Ext.swift */; };
 		29A4710B25865EFE009B5095 /* UITableView+GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710625865EFD009B5095 /* UITableView+GenericCell.swift */; };
 		29A47110258660DD009B5095 /* BirthdayListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710F258660DD009B5095 /* BirthdayListCoordinator.swift */; };
+		29A471242586686C009B5095 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A471232586686C009B5095 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		293C81D8258669BC00D43E4E /* PeopleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleProvider.swift; sourceTree = "<group>"; };
 		29A4707E2586513F009B5095 /* BirthdayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A470812586513F009B5095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A470832586513F009B5095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		29A4710525865EFD009B5095 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		29A4710625865EFD009B5095 /* UITableView+GenericCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+GenericCell.swift"; sourceTree = "<group>"; };
 		29A4710F258660DD009B5095 /* BirthdayListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListCoordinator.swift; sourceTree = "<group>"; };
+		29A471232586686C009B5095 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 		29A470BF2586527F009B5095 /* ConsumerNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				293C81D8258669BC00D43E4E /* PeopleProvider.swift */,
 			);
 			path = ConsumerNetwork;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 		29A470C025865289009B5095 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				29A471232586686C009B5095 /* People.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -418,8 +424,10 @@
 				29A470E725865AA4009B5095 /* BirthdayListViewModel.swift in Sources */,
 				29A4710A25865EFE009B5095 /* UIViewController+Ext.swift in Sources */,
 				29A470D325865702009B5095 /* EndpointProvider.swift in Sources */,
+				29A471242586686C009B5095 /* People.swift in Sources */,
 				29A470E225865A52009B5095 /* BirthdayListViewController.swift in Sources */,
 				29A4710B25865EFE009B5095 /* UITableView+GenericCell.swift in Sources */,
+				293C81D9258669BC00D43E4E /* PeopleProvider.swift in Sources */,
 				29A470822586513F009B5095 /* AppDelegate.swift in Sources */,
 				29A470B925865227009B5095 /* Coordinator.swift in Sources */,
 				29A470EC25865B0F009B5095 /* BirthdayListViewBuilder.swift in Sources */,

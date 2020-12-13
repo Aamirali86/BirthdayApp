@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class BirthdayListViewController: UIViewController {
     
@@ -30,6 +31,7 @@ class BirthdayListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        bindViewModel()
     }
     
     //MARK:- Private functions
@@ -38,6 +40,10 @@ class BirthdayListViewController: UIViewController {
         tableView.registerCell(BirthdayCell.self)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func bindViewModel() {
+        
     }
 }
 

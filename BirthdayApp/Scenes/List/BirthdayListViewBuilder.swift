@@ -11,7 +11,8 @@ final class BirthdayListViewBuilder {
     func build() -> UIViewController {
         let storyboard = UIStoryboard(name: "BirthdayList", bundle: Bundle.main)
         
-        let viewModel = BirthdayListViewModel()
+        let provider = PeopleProvider()
+        let viewModel = BirthdayListViewModel(service: provider)
         let controller = storyboard.instantiateInitialViewController {
             BirthdayListViewController(coder: $0, viewModel: viewModel)
         }
