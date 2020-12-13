@@ -31,6 +31,7 @@
 		29A4710925865EFE009B5095 /* UIView+Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710425865EFD009B5095 /* UIView+Instantiatable.swift */; };
 		29A4710A25865EFE009B5095 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710525865EFD009B5095 /* UIViewController+Ext.swift */; };
 		29A4710B25865EFE009B5095 /* UITableView+GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710625865EFD009B5095 /* UITableView+GenericCell.swift */; };
+		29A47110258660DD009B5095 /* BirthdayListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710F258660DD009B5095 /* BirthdayListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		29A4710425865EFD009B5095 /* UIView+Instantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Instantiatable.swift"; sourceTree = "<group>"; };
 		29A4710525865EFD009B5095 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		29A4710625865EFD009B5095 /* UITableView+GenericCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+GenericCell.swift"; sourceTree = "<group>"; };
+		29A4710F258660DD009B5095 /* BirthdayListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				29A470B725865226009B5095 /* AppCoordinator.swift */,
 				29A470B525865226009B5095 /* BaseCoordinaotr.swift */,
 				29A470B625865226009B5095 /* Coordinator.swift */,
+				29A4710F258660DD009B5095 /* BirthdayListCoordinator.swift */,
 			);
 			path = AppSetup;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				29A470842586513F009B5095 /* SceneDelegate.swift in Sources */,
 				29A4710825865EFE009B5095 /* UITableView+Ext.swift in Sources */,
 				29A4710925865EFE009B5095 /* UIView+Instantiatable.swift in Sources */,
+				29A47110258660DD009B5095 /* BirthdayListCoordinator.swift in Sources */,
 				29A4710725865EFE009B5095 /* Instantiatable.swift in Sources */,
 				29A470B825865227009B5095 /* BaseCoordinaotr.swift in Sources */,
 			);
@@ -526,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -581,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -598,6 +602,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BirthdayApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,6 +621,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BirthdayApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

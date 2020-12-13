@@ -23,8 +23,8 @@ final class AppCoordinator: BaseCoordinator<UINavigationController> {
     //MARK:- Override
     
     override func start() {
-        //let coordinator = VehicleCoordinator(rootViewController: rootViewController)
-        //startChild(coordinator)
+        let coordinator = BirthdayListCoordinator(rootViewController: rootViewController)
+        startChild(coordinator)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }
