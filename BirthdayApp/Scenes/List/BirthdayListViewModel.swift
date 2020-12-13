@@ -10,6 +10,7 @@ import Combine
 
 protocol BirthdayListViewModelType {
     var peoples: CurrentValueSubject<[People], NetworkRequestError> { get }
+    var isLoading: CurrentValueSubject<Bool, Never> { get }
     func numberOfRows() -> Int
     func people(at index: Int) -> People
 }
@@ -26,15 +27,18 @@ final class BirthdayListViewModel: BirthdayListViewModelType {
     }
     
     var peoples: CurrentValueSubject<[People], NetworkRequestError> = CurrentValueSubject([])
+    var isLoading: CurrentValueSubject<Bool, Never> = CurrentValueSubject(true)
 
     func fetchBirthdays() {
         service.fetchPeoples()
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
                 if case let .failure(error) = completion {
+                    self?.isLoading.send(false)
                     print(error.localizedDescription)
                 }
             }, receiveValue: { [weak self] response in
+                self?.isLoading.send(false)
                 self?.peoples.send(response.peoples)
             })
             .store(in: &subscriptions)

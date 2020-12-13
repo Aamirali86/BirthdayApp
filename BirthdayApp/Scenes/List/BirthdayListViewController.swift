@@ -18,6 +18,13 @@ class BirthdayListViewController: UIViewController {
     private let viewModel: BirthdayListViewModelType
     private var subscriptions = Set<AnyCancellable>()
     
+    private lazy var loader: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.color = .gray
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
+    
     init?(coder: NSCoder, viewModel: BirthdayListViewModelType) {
         self.viewModel = viewModel
         super.init(coder: coder)
@@ -40,6 +47,13 @@ class BirthdayListViewController: UIViewController {
     
     private func setupUI() {
         title = "Birthdays"
+        
+        view.addSubview(loader)
+        view.bringSubviewToFront(loader)
+        NSLayoutConstraint.activate([
+            loader.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
     
     private func setupTableView() {
@@ -57,6 +71,11 @@ class BirthdayListViewController: UIViewController {
             self?.tableView.reloadData()
         }
         .store(in: &subscriptions)
+        
+        viewModel.isLoading
+            .map{ !$0 }
+            .assign(to: \.isHidden, on: loader)
+            .store(in: &subscriptions)
     }
 }
 
