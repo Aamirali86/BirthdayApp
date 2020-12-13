@@ -23,6 +23,14 @@
 		29A470E225865A52009B5095 /* BirthdayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470E125865A52009B5095 /* BirthdayListViewController.swift */; };
 		29A470E725865AA4009B5095 /* BirthdayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470E625865AA4009B5095 /* BirthdayListViewModel.swift */; };
 		29A470EC25865B0F009B5095 /* BirthdayListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470EB25865B0F009B5095 /* BirthdayListViewBuilder.swift */; };
+		29A470F225865C37009B5095 /* BirthdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29A470F125865C37009B5095 /* BirthdayCell.xib */; };
+		29A470F725865DAD009B5095 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470F625865DAD009B5095 /* BirthdayCell.swift */; };
+		29A470FC25865DE7009B5095 /* BirthdayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470FB25865DE7009B5095 /* BirthdayCellViewModel.swift */; };
+		29A4710725865EFE009B5095 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710225865EFD009B5095 /* Instantiatable.swift */; };
+		29A4710825865EFE009B5095 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710325865EFD009B5095 /* UITableView+Ext.swift */; };
+		29A4710925865EFE009B5095 /* UIView+Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710425865EFD009B5095 /* UIView+Instantiatable.swift */; };
+		29A4710A25865EFE009B5095 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710525865EFD009B5095 /* UIViewController+Ext.swift */; };
+		29A4710B25865EFE009B5095 /* UITableView+GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4710625865EFD009B5095 /* UITableView+GenericCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +73,14 @@
 		29A470E125865A52009B5095 /* BirthdayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewController.swift; sourceTree = "<group>"; };
 		29A470E625865AA4009B5095 /* BirthdayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewModel.swift; sourceTree = "<group>"; };
 		29A470EB25865B0F009B5095 /* BirthdayListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewBuilder.swift; sourceTree = "<group>"; };
+		29A470F125865C37009B5095 /* BirthdayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirthdayCell.xib; sourceTree = "<group>"; };
+		29A470F625865DAD009B5095 /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
+		29A470FB25865DE7009B5095 /* BirthdayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCellViewModel.swift; sourceTree = "<group>"; };
+		29A4710225865EFD009B5095 /* Instantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		29A4710325865EFD009B5095 /* UITableView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		29A4710425865EFD009B5095 /* UIView+Instantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Instantiatable.swift"; sourceTree = "<group>"; };
+		29A4710525865EFD009B5095 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		29A4710625865EFD009B5095 /* UITableView+GenericCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+GenericCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +173,7 @@
 		29A470BE25865273009B5095 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				29A4710025865EA4009B5095 /* Extensions */,
 				29A470BF2586527F009B5095 /* ConsumerNetwork */,
 				29A470C025865289009B5095 /* Models */,
 				29A470C125865293009B5095 /* Resources */,
@@ -206,6 +223,7 @@
 		29A470CA25865420009B5095 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				29A470F025865C2D009B5095 /* Cell */,
 				29A470DC25865A21009B5095 /* BirthdayList.storyboard */,
 				29A470E125865A52009B5095 /* BirthdayListViewController.swift */,
 				29A470E625865AA4009B5095 /* BirthdayListViewModel.swift */,
@@ -230,6 +248,36 @@
 				29A470D225865702009B5095 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		29A470F025865C2D009B5095 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				29A470F125865C37009B5095 /* BirthdayCell.xib */,
+				29A470F625865DAD009B5095 /* BirthdayCell.swift */,
+				29A470FB25865DE7009B5095 /* BirthdayCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		29A4710025865EA4009B5095 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				29A4710125865EC3009B5095 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		29A4710125865EC3009B5095 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				29A4710225865EFD009B5095 /* Instantiatable.swift */,
+				29A4710325865EFD009B5095 /* UITableView+Ext.swift */,
+				29A4710625865EFD009B5095 /* UITableView+GenericCell.swift */,
+				29A4710425865EFD009B5095 /* UIView+Instantiatable.swift */,
+				29A4710525865EFD009B5095 /* UIViewController+Ext.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A470F225865C37009B5095 /* BirthdayCell.xib in Resources */,
 				29A4708E25865141009B5095 /* LaunchScreen.storyboard in Resources */,
 				29A470DD25865A21009B5095 /* BirthdayList.storyboard in Resources */,
 				29A4708B25865141009B5095 /* Assets.xcassets in Resources */,
@@ -364,14 +413,21 @@
 			files = (
 				29A470BA25865227009B5095 /* AppCoordinator.swift in Sources */,
 				29A470E725865AA4009B5095 /* BirthdayListViewModel.swift in Sources */,
+				29A4710A25865EFE009B5095 /* UIViewController+Ext.swift in Sources */,
 				29A470D325865702009B5095 /* EndpointProvider.swift in Sources */,
 				29A470E225865A52009B5095 /* BirthdayListViewController.swift in Sources */,
+				29A4710B25865EFE009B5095 /* UITableView+GenericCell.swift in Sources */,
 				29A470822586513F009B5095 /* AppDelegate.swift in Sources */,
 				29A470B925865227009B5095 /* Coordinator.swift in Sources */,
 				29A470EC25865B0F009B5095 /* BirthdayListViewBuilder.swift in Sources */,
 				29A470D525865702009B5095 /* NetworkManager.swift in Sources */,
+				29A470F725865DAD009B5095 /* BirthdayCell.swift in Sources */,
 				29A470D425865702009B5095 /* NetworkRequestError.swift in Sources */,
+				29A470FC25865DE7009B5095 /* BirthdayCellViewModel.swift in Sources */,
 				29A470842586513F009B5095 /* SceneDelegate.swift in Sources */,
+				29A4710825865EFE009B5095 /* UITableView+Ext.swift in Sources */,
+				29A4710925865EFE009B5095 /* UIView+Instantiatable.swift in Sources */,
+				29A4710725865EFE009B5095 /* Instantiatable.swift in Sources */,
 				29A470B825865227009B5095 /* BaseCoordinaotr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
