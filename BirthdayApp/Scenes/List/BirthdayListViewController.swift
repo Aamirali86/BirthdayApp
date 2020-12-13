@@ -29,6 +29,30 @@ class BirthdayListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+    }
+    
+    //MARK:- Private functions
+    
+    private func setupTableView() {
+        tableView.registerCell(BirthdayCell.self)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+}
+
+extension BirthdayListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BirthdayCell.cellIdentifier, for: indexPath) as? BirthdayCell else {
+            return UITableViewCell()
+        }
         
+        let cellViewModel = BirthdayCellViewModel()
+        cell.populate(with: cellViewModel)
+        return cell
     }
 }
