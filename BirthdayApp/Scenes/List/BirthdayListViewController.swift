@@ -96,5 +96,6 @@ extension BirthdayListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didClickRow(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

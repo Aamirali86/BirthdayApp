@@ -14,7 +14,11 @@ final class BirthdayListCoordinator: BaseCoordinator<UINavigationController> {
     }
     
     func navigateToProfile(with people: People) {
-        let profileVC = ProfileViewBuilder().build(with: people)
+        let profileVC = ProfileViewBuilder().build(with: people, coordinator: self)
         rootViewController.pushViewController(profileVC, animated: true)
+    }
+    
+    func goBack() {
+        rootViewController.popViewController(animated: true)
     }
 }

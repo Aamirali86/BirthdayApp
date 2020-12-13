@@ -8,10 +8,11 @@
 import UIKit
 
 final class ProfileViewBuilder {
-    func build(with people: People) -> UIViewController {
+    func build(with people: People,
+               coordinator: BirthdayListCoordinator) -> UIViewController {
         let storyboard = UIStoryboard(name: "Profile", bundle: Bundle.main)
         
-        let viewModel = ProfileViewModel(people: people)
+        let viewModel = ProfileViewModel(people: people, coordinator: coordinator)
         let controller = storyboard.instantiateInitialViewController {
             ProfileViewController(coder: $0, viewModel: viewModel)
         }
