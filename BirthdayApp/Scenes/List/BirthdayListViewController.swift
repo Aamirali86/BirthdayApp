@@ -93,4 +93,8 @@ extension BirthdayListViewController: UITableViewDelegate, UITableViewDataSource
         cell.populate(with: cellViewModel)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didClickRow(at: indexPath.row)
+    }
 }

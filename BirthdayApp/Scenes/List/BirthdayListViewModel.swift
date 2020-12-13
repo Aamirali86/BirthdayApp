@@ -13,16 +13,20 @@ protocol BirthdayListViewModelType {
     var isLoading: CurrentValueSubject<Bool, Never> { get }
     func numberOfRows() -> Int
     func people(at index: Int) -> People
+    func didClickRow(at index: Int)
 }
 
 final class BirthdayListViewModel: BirthdayListViewModelType {
     private let service: PeopleProviderType
+    private let coordinator: BirthdayListCoordinator
     private var subscriptions = Set<AnyCancellable>()
     
     //MARK:- Init
     
-    init(service: PeopleProviderType) {
+    init(service: PeopleProviderType,
+         coordinator: BirthdayListCoordinator) {
         self.service = service
+        self.coordinator = coordinator
         fetchBirthdays()
     }
     
@@ -50,5 +54,9 @@ final class BirthdayListViewModel: BirthdayListViewModelType {
     
     func people(at index: Int) -> People {
         peoples.value[index]
+    }
+    
+    func didClickRow(at index: Int) {
+        coordinator.navigateToProfile(with: peoples.value[index])
     }
 }

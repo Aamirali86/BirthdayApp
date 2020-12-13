@@ -19,6 +19,8 @@ final class BirthdayCellViewModel: BirthdayCellViewModelType {
     private let inputFormatter: DateFormatter
     private let outputFormatter: DateFormatter
     
+    //MARK:- Init
+    
     init(people: People) {
         self.people = people
         inputFormatter = DateFormatter()

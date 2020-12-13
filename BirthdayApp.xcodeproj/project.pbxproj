@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		293C81D9258669BC00D43E4E /* PeopleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C81D8258669BC00D43E4E /* PeopleProvider.swift */; };
+		293C81E32586783D00D43E4E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C81E22586783D00D43E4E /* ProfileViewController.swift */; };
+		293C81EB2586787B00D43E4E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C81EA2586787B00D43E4E /* ProfileViewModel.swift */; };
+		293C81F0258679D500D43E4E /* ProfileViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C81EF258679D500D43E4E /* ProfileViewBuilder.swift */; };
+		293C81F525867A0D00D43E4E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293C81F425867A0D00D43E4E /* Profile.storyboard */; };
 		29A470822586513F009B5095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470812586513F009B5095 /* AppDelegate.swift */; };
 		29A470842586513F009B5095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A470832586513F009B5095 /* SceneDelegate.swift */; };
 		29A4708B25865141009B5095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A4708A25865141009B5095 /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		293C81D8258669BC00D43E4E /* PeopleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleProvider.swift; sourceTree = "<group>"; };
+		293C81E22586783D00D43E4E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		293C81EA2586787B00D43E4E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		293C81EF258679D500D43E4E /* ProfileViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewBuilder.swift; sourceTree = "<group>"; };
+		293C81F425867A0D00D43E4E /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		29A4707E2586513F009B5095 /* BirthdayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A470812586513F009B5095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A470832586513F009B5095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +122,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293C81E12586782E00D43E4E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				293C81E22586783D00D43E4E /* ProfileViewController.swift */,
+				293C81EA2586787B00D43E4E /* ProfileViewModel.swift */,
+				293C81EF258679D500D43E4E /* ProfileViewBuilder.swift */,
+				293C81F425867A0D00D43E4E /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		29A470752586513F009B5095 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +243,7 @@
 		29A470C92586540F009B5095 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				293C81E12586782E00D43E4E /* Profile */,
 				29A470CA25865420009B5095 /* List */,
 			);
 			path = Scenes;
@@ -394,6 +414,7 @@
 			files = (
 				29A470F225865C37009B5095 /* BirthdayCell.xib in Resources */,
 				29A4708E25865141009B5095 /* LaunchScreen.storyboard in Resources */,
+				293C81F525867A0D00D43E4E /* Profile.storyboard in Resources */,
 				29A470DD25865A21009B5095 /* BirthdayList.storyboard in Resources */,
 				29A4708B25865141009B5095 /* Assets.xcassets in Resources */,
 			);
@@ -426,6 +447,7 @@
 				29A470D325865702009B5095 /* EndpointProvider.swift in Sources */,
 				29A471242586686C009B5095 /* People.swift in Sources */,
 				29A470E225865A52009B5095 /* BirthdayListViewController.swift in Sources */,
+				293C81E32586783D00D43E4E /* ProfileViewController.swift in Sources */,
 				29A4710B25865EFE009B5095 /* UITableView+GenericCell.swift in Sources */,
 				293C81D9258669BC00D43E4E /* PeopleProvider.swift in Sources */,
 				29A470822586513F009B5095 /* AppDelegate.swift in Sources */,
@@ -433,7 +455,9 @@
 				29A470EC25865B0F009B5095 /* BirthdayListViewBuilder.swift in Sources */,
 				29A470D525865702009B5095 /* NetworkManager.swift in Sources */,
 				29A470F725865DAD009B5095 /* BirthdayCell.swift in Sources */,
+				293C81F0258679D500D43E4E /* ProfileViewBuilder.swift in Sources */,
 				29A470D425865702009B5095 /* NetworkRequestError.swift in Sources */,
+				293C81EB2586787B00D43E4E /* ProfileViewModel.swift in Sources */,
 				29A470FC25865DE7009B5095 /* BirthdayCellViewModel.swift in Sources */,
 				29A470842586513F009B5095 /* SceneDelegate.swift in Sources */,
 				29A4710825865EFE009B5095 /* UITableView+Ext.swift in Sources */,

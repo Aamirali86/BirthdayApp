@@ -8,11 +8,11 @@
 import UIKit
 
 final class BirthdayListViewBuilder {
-    func build() -> UIViewController {
+    func build(with coordinator: BirthdayListCoordinator) -> UIViewController {
         let storyboard = UIStoryboard(name: "BirthdayList", bundle: Bundle.main)
         
         let provider = PeopleProvider()
-        let viewModel = BirthdayListViewModel(service: provider)
+        let viewModel = BirthdayListViewModel(service: provider, coordinator: coordinator)
         let controller = storyboard.instantiateInitialViewController {
             BirthdayListViewController(coder: $0, viewModel: viewModel)
         }
