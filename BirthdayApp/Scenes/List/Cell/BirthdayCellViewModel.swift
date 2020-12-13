@@ -13,11 +13,19 @@ protocol BirthdayCellViewModelType {
 }
 
 final class BirthdayCellViewModel: BirthdayCellViewModelType {
+    //MARK:- Properties
+    
+    private let people: People
+    
+    init(people: People) {
+        self.people = people
+    }
+    
     var name: String {
-        "James"
+        "\(people.name.first) \(people.name.last)"
     }
     
     var date: String {
-        "24-12-99"
+        "\(people.dateOfBirth.date)"
     }
 }

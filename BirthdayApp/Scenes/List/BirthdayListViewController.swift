@@ -16,6 +16,7 @@ class BirthdayListViewController: UIViewController {
     //MARK:- Properties
     
     private let viewModel: BirthdayListViewModelType
+    private var subscriptions = Set<AnyCancellable>()
     
     init?(coder: NSCoder, viewModel: BirthdayListViewModelType) {
         self.viewModel = viewModel
@@ -30,11 +31,16 @@ class BirthdayListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setupTableView()
         bindViewModel()
     }
     
     //MARK:- Private functions
+    
+    private func setupUI() {
+        title = "Birthdays"
+    }
     
     private func setupTableView() {
         tableView.registerCell(BirthdayCell.self)
@@ -43,13 +49,20 @@ class BirthdayListViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        
+        viewModel
+            .peoples
+            .sink { completion in
+            print(completion)
+        } receiveValue: { [weak self] peoples in
+            self?.tableView.reloadData()
+        }
+        .store(in: &subscriptions)
     }
 }
 
 extension BirthdayListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        viewModel.numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +70,7 @@ extension BirthdayListViewController: UITableViewDelegate, UITableViewDataSource
             return UITableViewCell()
         }
         
-        let cellViewModel = BirthdayCellViewModel()
+        let cellViewModel = BirthdayCellViewModel(people: viewModel.people(at: indexPath.row))
         cell.populate(with: cellViewModel)
         return cell
     }

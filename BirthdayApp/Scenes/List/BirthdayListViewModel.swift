@@ -10,6 +10,8 @@ import Combine
 
 protocol BirthdayListViewModelType {
     var peoples: CurrentValueSubject<[People], NetworkRequestError> { get }
+    func numberOfRows() -> Int
+    func people(at index: Int) -> People
 }
 
 final class BirthdayListViewModel: BirthdayListViewModelType {
@@ -36,5 +38,13 @@ final class BirthdayListViewModel: BirthdayListViewModelType {
                 self?.peoples.send(response.peoples)
             })
             .store(in: &subscriptions)
+    }
+    
+    func numberOfRows() -> Int {
+        peoples.value.count
+    }
+    
+    func people(at index: Int) -> People {
+        peoples.value[index]
     }
 }
